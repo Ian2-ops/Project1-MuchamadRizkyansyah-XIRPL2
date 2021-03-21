@@ -15,7 +15,7 @@ import java.util.Scanner;
  *
  * @author Ian
  */
-public class MainAplikasiKasir {
+ public class MainAplikasiKasir {
 
     public DaftarMenu daftarMenu;
     //tambahkan
@@ -35,9 +35,25 @@ public class MainAplikasiKasir {
          MainAplikasiKasir app = new MainAplikasiKasir();
 
          app.generateDaftarMenu();
+
+        //mulai transaksi
+        System.out.println("======== TRANSAKSI ========");
+
+        //ambil transaksi
+        System.out.println("No Transaksi :  ");
+        no_transaksi = input.next();
+        System.out.println("Pemesan :  ");
+        nama_pemesan = input.next();
+        System.out.println("Tanggal : [dd-mm-yyy] ");
+        tanggal = input.next();
+        System.out.println("Makan ditempat? : [Y/N] ");
+        makan_ditempat = input.next();
+
+        if(makan_ditempat.equalsIgnoreCase("Y")){
+            System.out.println("Nomor Meja : ");
+            no_meja = input.next();
+        }
     }
-
-
 
     public void generateDaftarMenu() {
 
